@@ -1,0 +1,45 @@
+@mixin tamaños ($d, $c , $l , $h , $w, $color ) {
+    display: $d;
+    justify-content: $c;
+    align-items: $l;
+    height: $h;
+    width: $w;
+    background-color: $color;
+}
+
+
+.section__productos__2{
+        @include tamaños( flex,  center ,  center, 300px  , 90vw ,white );
+        margin: auto;
+        margin-top: 50px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px 1px rgb(235, 230, 230);
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+      .boxPhoto{
+
+          @include tamaños(flex, space-around  , center,"" ,"" ,"" );
+            flex-direction: row-reverse;
+            border-bottom: 1px solid rgb(211, 201, 201);
+            border-right:1px solid rgb(211, 201, 201); ;
+            padding: 1em;
+        img{
+            height: 90px;
+            border-radius: 5px;
+            background-position: center;
+            object-fit: cover;
+            text-align: center;
+                transition: all .3s ease-in-out;
+            &:hover{
+                    cursor: pointer;
+                    transform: scale(1.1);
+                    transition: all .3s ease-in-out;
+
+            }
+
+        }
+      }
+        
+
+
+}

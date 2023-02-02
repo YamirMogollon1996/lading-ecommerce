@@ -1,0 +1,54 @@
+@mixin tamaños ($d, $c , $l , $h , $w, $color ) {
+    display: $d;
+    justify-content: $c;
+    align-items: $l;
+    height: $h;
+    width: $w;
+    background-color: $color;
+
+}
+
+
+.sectin__productos{
+
+        width: 100vw;
+        // height: 250vh;
+        margin: auto;
+        background-color: #DCD9D4;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.10) 0%, rgba(0, 0, 0, 0.50) 50%);
+        background-blend-mode: soft-light, screen;
+        margin-top: 50px;
+        
+        .productos__section__denter{
+            
+                @include tamaños(flex,space-around ,center ,   100px  ,90vw , "");
+                margin: auto;
+                .nodochildren
+                {
+                    margin-top: 50px;    
+                    padding: 1em;
+                    border: 1px solid rgb(185, 181, 181);
+                    border-radius: 5px;
+                    @include tamaños(flex, space-between , center   , 100px , 250px,"" ) ;
+                    transition: all .3s ease-in-out;
+                    img{
+                                    transition: all .5s ease-in-out;
+                    }
+                    img:hover{
+                    transform: rotate(360deg);
+                                transition: all .3s ease-in-out;
+
+                    }
+                    &:hover{
+                        cursor: pointer;
+                            border: 1px solid rgb(152, 163, 163);
+                            transition: all .3s ease-in-out;
+                            box-shadow: 1px 1px 1px 1px rgb(152, 163, 163);;
+
+                    }
+                }
+        }
+        
+
+
+}

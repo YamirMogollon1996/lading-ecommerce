@@ -1,0 +1,77 @@
+%btn{ 
+    height: 40px;
+    min-width: 100px;
+    padding: 1em;
+    border: none;
+    font-size: 1em;
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 2px  2px 6px 2px  rgba(0, 0,0, 0.2,);
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+
+@mixin buton($name , $color) {
+    .btn-outline-#{$name} {
+        border: 1px solid $color;
+        color: $color;
+        &:hover {
+            background-color: lighten($color: $color, $amount: 10) ;
+            color: #fff;
+        }
+    }
+}
+
+.btn-{
+    &primary ,&secondary, &terceriario {
+        @extend  %btn; 
+        
+    }
+        &primary { 
+                background-color: royalblue;
+        }
+        &secondary { 
+                background-color: #850907;
+        }
+        &terceriario {
+                         background-color: #a2ff48;
+        }
+
+        }
+
+.btn-outline {
+
+    @extend %btn ; 
+    background-color: #fff;
+    transition: 0.3s all ease-in-out;
+
+}
+    @include buton('primary', royalblue);
+    @include buton("secondary", #850907);
+    @include buton("terceriario", #a2ff48)
+;
+
+
+
+@mixin  size($w ,$h,$p,$m,$c,$b){
+    
+    width: $w;
+    height: $h;
+    padding: $p;
+    margin: $m;
+    background-color: $c;
+    border: 1px solid $b;
+
+}
+
+
+.img{
+        &-container{
+            @include size(200px, 200px,1em ,2rem , $colorbeaiftul , black);
+            &-big{
+                @include size(500px,500px,1em,2rem, $colorbeaiftul, green   )
+            }
+        }
+}

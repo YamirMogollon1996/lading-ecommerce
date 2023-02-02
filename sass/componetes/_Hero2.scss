@@ -1,0 +1,54 @@
+
+.hero__baca{
+
+
+    width: 90vw;
+    height: 70vh;
+    margin: 1em;
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    .div{
+
+        border-radius: 5px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        // opacity: 0.8;
+        transition: all .5s ease-in-out ;
+        overflow: hidden;
+
+        &-1{
+         
+            grid-row: 1/3;
+            grid-column: 1/3;
+            background-image: url(./../../assets/pexels-vincent-rivaud-2333853.jpg);
+
+        }
+        &-2 {
+                background-image: url(./../../assets/pexels-aphiwat-chuangchoem-359989.jpg);
+
+        }
+        &-3 { 
+            background-image: url(./../../assets/pexels-moose-photos-1037993.jpg);
+        }
+        &-4{
+                background-image: url(./../../assets/pexels-pixabay-210528.jpg);
+        }
+        &-5 {
+            background-image: url(./../../assets/pexels-monoar-rahman-100733.jpg);
+        }
+        &:hover{
+            cursor: pointer;
+            // opacity: 1;
+            transition: all .5s ease-in-out;
+            transform: scale( 0.9    );
+
+        }
+    }
+
+
+
+}

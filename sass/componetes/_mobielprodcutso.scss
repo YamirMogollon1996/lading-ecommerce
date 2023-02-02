@@ -1,0 +1,49 @@
+@mixin tamaños ($d, $c , $l , $h , $w, $color ) {
+
+    display: $d;
+    justify-content: $c;
+    align-items: $l;
+    height: $h;
+    width: $w;
+    background-color: $color;
+}
+.clasic-actions-mobile{
+        @include tamaños(flex,space-between ,center ,90vh ,90vw ,"" ) ; 
+        height: 500px;
+        margin: auto;
+        margin-top: 2em;
+
+        &-1 {
+            padding: 2em;
+            background-color: #fff;
+      
+            box-shadow: 2px 2px 2px 2px white;
+            border-radius: 5px;
+            margin-top: 2em;
+            img{
+                transition: all .3s ease-in-out;
+            }
+            img:hover{
+                    transition: all  .3s ease-in-out;
+                    transform: scale(1.1);
+            }
+            &-singular{
+                background-color: black;
+                color: white;
+                box-shadow: none;
+            }
+            &:hover{
+                cursor: pointer;
+                
+            }
+            .imganes{
+                    img{
+                        margin-top: 20px;
+                        border-radius: 5px;
+                    }
+            }
+            
+        }
+       
+
+}

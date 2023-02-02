@@ -1,0 +1,86 @@
+@mixin tamaños ($d, $c , $l , $h , $w, $color ) {
+    display: $d;
+    justify-content: $c;
+    align-items: $l;
+    height: $h;
+    width: $w;
+    background-color: $color;
+}
+
+.section__productos__3{
+    @include tamaños(flex, space-around  ,  center ,"" ,90vw ,"" );
+ 
+    margin: auto;
+    margin-top: 40px ;
+    margin-bottom: 40px;
+    padding: 1em;
+    .card{
+            @include tamaños(flex, space-around, center, 330px, 240px , "");
+            flex-direction: column-reverse;
+            border: 2px solid rgb(216, 208, 208);
+            background-color: white;
+            text-align: center;
+            border-radius: 5px;
+            position: relative;
+            &:hover{
+                box-shadow: 1px 1px 3px 1px rgb(172, 165, 165);
+                .oculto__luego_descolcuolpo{
+               
+                    transition: all .3s ease-in-out;
+                     transform: translateX(0px);
+                    display: flex;
+                }
+            }
+            .section_card  {
+                &:hover{
+                    cursor: pointer;
+                }
+                &_1 { 
+                    p{
+                        color: rgb(75, 6, 6);
+                        font-weight: 700;
+                    }
+                    .heart{
+                        float: right;
+                    }
+                }
+                &_2
+                {
+                  img{
+                    width: 150px;
+                    height: 150px;
+                    filter: brightness(1.1);
+                    mix-blend-mode:  multiply;
+                    object-fit: cover;
+                  }
+
+            }
+
+            }
+    }
+
+}
+.rosa{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 50px;
+
+}
+.oculto__luego_descolcuolpo{
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    display: flex;
+    flex-direction: column;
+    border:  2px solid rgb(168, 168, 163);
+    padding: 0.5em;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+    justify-content: space-between;
+    transform: translateX(50px);
+    height: 100px;
+    display: none;
+    &:hover{
+        cursor: pointer;
+    }
+}

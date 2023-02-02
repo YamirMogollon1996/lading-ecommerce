@@ -1,0 +1,81 @@
+
+%btn {
+height: 40px;
+    min-width: 100px;
+    padding: 1em;
+    border: none;
+    font-size: 1em;
+    border-radius: 5px;
+    background-color: royalblue;
+  
+    &:hover{
+        color: white;
+        box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.2, );
+        cursor: pointer;
+    }
+
+
+}
+@mixin tamaños ($d, $c , $l , $h , $w, $color ) {
+    display: $d;
+    justify-content: $c;
+    align-items: $l;
+    height: $h;
+    width: $w;
+    background-color: $color;
+}
+
+.servidor{
+    text-align: center;
+    font-size: 40px;
+    margin: 40px
+}
+
+.ideas{
+
+        @include tamaños(flex,   space-around ,  center ,"" , 95vw ,"" );
+        margin: 60px auto;
+        // border: 1px solid beige;
+        padding: 1em;
+        .iamgenes_Description{
+
+            width: 400px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px 2px $firstcolor;
+            .description{
+                padding: 1em;
+                p{
+                    color: gray;
+                    margin-bottom: 10px;
+                }
+                button{
+                    @extend %btn;
+                    margin-top: 10px;
+                }
+            }
+        }
+        .imagen{
+            height: 250px;
+            width: 100%;
+            border-radius: 5px;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            
+            &_1{
+                background-image: url(./../../assets/carpetaImagenes/amarillo\ \(1\).jpg);
+            }
+            &_2{
+                    background-image: url(./../../assets/carpetaImagenes/amarillo\ \(2\).jpg);
+            }
+            &_3{
+background-image: url(./../../assets/carpetaImagenes/amarillo\ \(3\).jpg);
+            }
+            &_4{
+                background-image: url(./../../assets/carpetaImagenes/amarillo\ \(4\).jpg);
+
+            }
+        }
+    
+}

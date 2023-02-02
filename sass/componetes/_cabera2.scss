@@ -1,0 +1,78 @@
+@mixin  tamaños ( $d,$c , $l  ,$h ,$w, $color )  {
+    display: $d;
+    justify-content: $c;
+    align-items: $l;
+    height: $h;
+    width: $w;
+    background-color: $color;
+
+
+}
+.cabecera{ 
+
+        &-low , &-medium,&-medium {
+            @include tamaños(flex, space-around ,center , "", 100vw , #121d2d ) ;
+        }
+        &-low{
+            border-bottom: 1px solid gray;
+            color: white;
+            &-denter{
+                    background-color: rebeccapurple;
+                    @include  tamaños(flex, space-around, center, "", 30%, #121d2d);
+                    padding: 0.5em;
+                    p:hover{
+                        cursor: pointer;
+                    }
+                }
+        }
+        &-medium{
+        padding: 0.5em;
+
+            .input_name{
+                width: 40%;
+                height: 40px;
+                border: none;
+                border-radius: 4px;
+                outline: none;
+                padding-left: 40px;
+            };
+            ::placeholder{
+                display: flex;
+            }
+            color: white;
+                &-premium{
+                    @include tamaños(flex, space-around, center, "", "", #121d2d);
+                    div{
+                            @include tamaños(flex, space-around, center, "", "", #121d2d);
+                            padding: 0.5em;
+                            flex-direction: column;
+                            &:hover{
+                                cursor: pointer;
+                            }
+                    }
+                }
+        }
+        &-high {
+        
+            padding: 0.5em;
+            .section-cart{
+            @include tamaños(flex, space-evenly, center, "", 30vw, "");
+            }
+            color: white;
+            @include tamaños(flex, start, center, "", 100vw, #121d2d);
+            border-top: 1px solid white;
+            .section--home{
+                            // border: 1px solid rebeccapurple;
+                                @include tamaños(flex, space-around, center, "", 30vw, "");
+                                p:hover{
+                                    cursor: pointer;
+                                    color: gray;
+                                }
+            };
+            
+        background-color: #121d2d;
+        }
+         
+
+    
+}

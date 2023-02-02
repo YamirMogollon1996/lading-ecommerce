@@ -1,0 +1,48 @@
+@mixin tamaños ($d, $c , $l , $h , $w, $color ) {
+    display: $d;
+    justify-content: $c;
+    align-items: $l;
+    height: $h;
+    width: $w;
+    background-color: $color;
+    
+}
+
+
+.footer{
+    
+            display: flex;
+            flex-direction: column;
+            background-color: #121d2d;
+            color: white;
+
+    .fotter_uno{
+            border-bottom: 1px solid white;
+            @include tamaños(flex, space-around,center, 150px, 90vw , "" );
+            margin: auto;
+            input{
+
+                width: 500px;
+                height: 40px;
+                border-radius: 3px;
+                outline: none
+            }   
+
+    }
+    .fotter_second{
+
+               @include tamaños(flex, space-around,   center, 400px, 90vw , "");
+               margin: auto;
+               div{
+                display: flex;
+                flex-direction: column;
+                height: 200px;
+                justify-content: space-between;
+                font-weight: 400;
+                p{
+                    font-weight: 900;
+                }
+               }
+    }
+
+}

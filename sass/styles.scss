@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Quicksand', sans-serif;
+
+}
+// primero variables
+@import 'abstrack/variables';
+
+
+//luego los componentes
+@import 'componetes/body';
+@import 'componetes/butones' ;
+@import 'componetes/header' ;
+@import 'componetes/heroseccion' ;
+@import 'componetes/cabera2';
+@import 'componetes/Hero2';
+@import 'componetes/Productos';
+@import 'componetes/productos2';
+@import 'componetes/mobielprodcutso';
+@import 'componetes/sectionProductos3';
+@import 'componetes/sectionideas' ; 
+@import 'componetes/footer'
